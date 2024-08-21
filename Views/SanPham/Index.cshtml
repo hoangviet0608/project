@@ -1,0 +1,27 @@
+﻿﻿@model List<QLBH.Models.sanpham>
+
+<h2>Danh sach san pham</h2>
+<a href="/SanPham/Add">Add</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Thao Tac</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>
+                    <a href="/SanPham/Edit?id=@item.id">Sua</a>
+                    <a href="/SanPham/Delete?id=@item.id">Xoa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

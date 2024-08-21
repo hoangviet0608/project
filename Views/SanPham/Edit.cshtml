@@ -1,0 +1,15 @@
+﻿﻿@model QLBH.Models.sanpham
+
+@{
+    ViewBag.Title = "Edit";
+    string abc = Request["id"];
+}
+
+<h2>Edit san pham co id la: @abc</h2>
+<form action="/SanPham/PostEdit" method="post">
+    <label for="ID:">id</label>
+    <input readonly type="text" name="ID" value="@Model.id" />
+    <label for="Name">name</label>
+    <input type="text" name="Name" value="@Model.name" />
+    <input type="submit" name="Submit" value="Sua" />
+</form>
